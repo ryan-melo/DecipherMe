@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge ONE - Decodificador de Texto</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="">
+
+  <nav>
+    <div>
+      <h6>Escolha seu tipo de criptografia:</h6>
+      <select name="typeOfCript" id="typeOfCript">
+      <option value="cesar">Criptigrafia de César</option>
+      <option value="default">Criptigrafia Padrão</option>
+      </select>
+    </div>
+
+    <div class="linkAndGitandBlueMode">
+      <div class="blueMode">
+        <h6>Blue Mode:</h6>
+        <label for="checkbox" id="label">
+          <p class="on">On</p>
+          <p class="off">Off</p>
+          <div id="labelDiv"></div>
+          <input type="checkbox" name="" id="checkbox">
+        </label>
+      </div>
+
+      <div class="linkAndGit">
+        <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank"><img src="assets/icons8-linkedin-64este.png" alt=""></a>
+        <a href="https://github.com/ryan-melo" target="_blank"><img src="assets/icons8-github-64 (1)este.png" alt=""></a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="logo">
+      <img src="assets/logo.svg" alt="">
+    </div>
+
+    <section id="left">
+        <div>
+          <textarea id="textarea" class="" placeholder="Digite seu texto" autofocus></textarea>
+        </div>
+
+        <section class="exclamationAndButtons">
+          <div class="exclamation">
+            <img src="assets/exclamation-icon.svg" alt="">
+          <span>Não utilizar acento.</span>
+          </div>
+          
+          <div class="buttons">
+            <button class="criptografar">Criptografar</button>
+            <button class="descriptografar">Descriptografar</button>
+          </div>
+        </section>
+    </section>
+
+    <section id="right" class="right">
+      <div class="result hide">
+        <p class="pResult"></p>
+        <textarea id="TextAreaResult" class="" cols="19" rows="11" disabled></textarea>
+      </div>
+      <div class="container-right">
+        <div class="" id="nothingFound">
+          <img src="assets/lupa.svg" alt="">
+          <div class="text">
+            <h1>Nenhuma mensagem encontrada</h1>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+          </div>
+        </div>
+      </div>
+        <div class="showAfterTheresult hide">
+          <button class="copy">Copiar</button>
+          <button class="clean">Limpar</button>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <p class="pFooter">
+      Desenvolvido com ❤️ por
+      <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank" class="aFooter">
+        Ryan Melo
+      </a>
+    </p>
+  </footer>
+</body>
+</html>

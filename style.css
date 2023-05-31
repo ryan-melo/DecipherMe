@@ -1,0 +1,411 @@
+:root {
+  /* Dark blue */
+  --Dark-blue-100: #609ED4;
+  --Dark-blue-300: #356EA9;
+  --Dark-blue-200: #0A3871;
+  --Dark-blue-400: #072B61;
+  --Dark-blue-500: #052051;
+
+  /* Gray */
+  --Gray-100: #CED4DA;
+  --Gray-200: #ADB5BD;
+  --Gray-500: #868E96;
+  --Gray-400: #495057;
+  --Gray-500: #343A40;
+
+  /* Light blue */
+  --Light-blue-100: #F3F5FC;
+  --Light-blue-200: #EFF1FA;
+  --Light-blue-300: #E9ECF8;
+  --Light-blue-400: #AAB2D5;
+  --Light-blue-500: #757FB2;
+
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E5E5E5;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  display: inline-block;
+  position: absolute;
+  top: 4%;
+  left: 1%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8rem;
+  margin: auto;
+  margin-top: 2rem;
+
+  width: 95vw;
+  height: 65rem;
+
+  position: relative;
+}
+
+#left {
+  max-width: 86.7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right {
+  max-width: 40rem;
+
+  background-color: #FFFFFF;
+  border-radius: 3.2rem;
+
+  padding: 0 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+#rightWithButton {
+  max-width: 40rem;
+
+  background-color: #FFFFFF;
+  border-radius: 3.2rem;
+
+  padding: 0 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#left textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  width: 70rem;
+  height: 41.6rem;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--Dark-blue-500);
+
+  padding: 2rem;
+
+  resize: none;
+}
+
+#left textarea::placeholder {
+  font-size: 3.2rem;
+  color: var(--Dark-blue-300);
+}
+
+#right .text {
+  font-size: 2.4rem;
+  width: 33.6rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#right h1 {
+  font-size: 2.4rem;
+  font: 700;
+  margin-bottom: 1.5rem;
+
+  color: var(--Dark-blue-300);
+}
+
+#right p {
+  font-size: 1.6rem;
+  font: 400;
+
+  color: var(--Light-blue-500);
+}
+
+.exclamation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+
+  width: 25rem;
+  font-size: 1.5rem;
+
+  margin-left: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 1.6rem;
+}
+
+.criptografar, .descriptografar, .copy, .clean{
+  width: 32.8rem;
+  height: 6.7rem;
+
+  border: 2px solid var(--Dark-blue-300);
+  border-radius: 2.4rem;
+
+  background-color: var(--Light-blue-300);
+  color: var(--Dark-blue-300);
+
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.showAfterTheresult .copy, .showAfterTheresult .clean {
+  width: 50%;
+}
+
+.showAfterTheresult {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+
+  width: 90%;
+  margin-top: 3.5rem;
+}
+
+button:hover {
+  background-color: var(--Dark-blue-400);
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.container-right {
+  position: relative;
+  text-align: center;
+}
+
+.result { 
+  width: 33.6rem;
+  height: 43.7rem;
+  text-align: center;
+}
+
+.nothingFound {
+  display: none;
+}
+
+#aviso {
+  width: 100%;
+  height: 1rem;
+  background-color: rgb(221, 47, 47);
+  color: white;
+  font-size: 3rem;
+}
+
+.alert {
+  box-shadow: 0 0 5px rgb(221, 47, 47);
+  border-radius: 3rem;
+}
+
+.alert2 {
+  border: 2px solid rgb(221, 47, 47);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-left: 20px;
+}
+
+#TextAreaResult {
+  border: none;
+  outline: none;
+  resize: none;
+  
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  cursor: text;
+  color: var(--Dark-blue-500);
+
+  background-color: #FFFFFF;
+}
+
+.pResult {
+  margin-bottom: 1rem;
+}
+
+.showAfterTheresult .copied {
+  content: "Copiado!";
+  background-color: var(--Dark-blue-400);
+  color: #FFFFFF;
+}
+
+/* DARK MODE */
+
+.bodyDark {
+  background-color: #000e28;
+}
+
+.rightDark {
+  background-color: #000637;
+  border: 2px solid #404c7a;
+}
+
+button.buttonDark {
+  background-color: #000637;
+  color: #c3cefc;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+label {
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+  border: 3px solid #004ede;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+label p {
+  display: inline-block;
+}
+
+.on {
+  position: absolute;
+  left: 4px;
+  font-weight: bold;
+  color: #E5E5E5;
+}
+
+.off {
+  position: absolute;
+  left: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+label div {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 100%;
+  background-color: #004ede;
+  position: absolute;
+  left: 2px;
+}
+
+.buttons label, .blueMode label p, .blueMode div {
+  cursor: pointer;
+}
+
+@keyframes toggleOn {
+  0% {
+    left: 2px;
+  }
+
+  100% {
+    left: 26px;
+    background-color: #008fcc;
+  }
+}
+
+
+@keyframes toggleOff {
+  0% {
+    left: 26px;
+  }
+
+  100% {
+    left: 2px;
+    background-color: #004ede;
+  }
+}
+
+#typeOfCript {
+  height: 3rem;
+  padding: 0 3px;
+
+  border-radius: 10px;
+  text-align: center;
+  color: #008fcc;
+  font-weight: 550;
+  font-size: 2rem;
+
+  outline: none;
+  border: 2px solid #008fcc;
+  background-color: transparent;
+
+  appearance: none;
+}
+
+nav {
+  height: 5rem;
+  background-color: var(--Dark-blue-400);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > div, .blueMode  {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+}
+
+nav h6 {
+  color: #008fcc;
+  font-size: 1.5rem;
+}
+
+.linkAndGitandBlueMode {
+  display: flex;
+  gap: 15rem;
+}
+
+.linkAndGit img{
+  width: 35%;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+}
+
+footer p, footer a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  
+  background-image: linear-gradient(to right, rgb(104, 0, 139), rgb(0, 41, 249));
+  background-clip: text;
+  -webkit-background-clip: text;;
+  -webkit-text-fill-color: transparent;
+}
