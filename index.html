@@ -14,7 +14,7 @@
   <script src="script.js" defer></script>
 </head>
 <body class="">
-
+<div class="container">
   <nav>
     <div>
       <h6>Escolha seu tipo de criptografia:</h6>
@@ -41,34 +41,38 @@
       </div>
     </div>
   </nav>
-
+  
   <main>
     <div class="logo">
       <img src="assets/logo.svg" alt="">
     </div>
-
+    
     <section id="left">
-        <div>
-          <textarea id="textarea" class="" placeholder="Digite seu texto" autofocus></textarea>
-        </div>
+      <div>
+        <textarea id="textarea" class="" placeholder="Digite seu texto" autofocus></textarea>
+      </div>
 
-        <section class="exclamationAndButtons">
-          <div class="exclamation">
-            <img src="assets/exclamation-icon.svg" alt="">
-          <span>Não utilizar acento.</span>
-          </div>
-          
-          <div class="buttons">
-            <button class="criptografar">Criptografar</button>
-            <button class="descriptografar">Descriptografar</button>
-          </div>
-        </section>
+      <section class="exclamationAndButtons">
+        <div class="exclamation">
+          <img src="assets/exclamation-icon.svg" alt="">
+        <span>Não utilizar acento.</span>
+        </div>
+        
+        <div class="buttons">
+          <button class="criptografar">Criptografar</button>
+          <button class="descriptografar">Descriptografar</button>
+        </div>
+      </section>
     </section>
 
     <section id="right" class="right">
       <div class="result hide">
         <p class="pResult"></p>
-        <textarea id="TextAreaResult" class="" cols="19" rows="11" disabled></textarea>
+        <textarea id="TextAreaResult" class="hide" disabled ></textarea>
+        <div class="showAfterTheresult hide">
+          <button class="copy">Copiar</button>
+          <button class="clean">Limpar</button>
+        </div>
       </div>
       <div class="container-right">
         <div class="" id="nothingFound">
@@ -79,19 +83,13 @@
           </div>
         </div>
       </div>
-        <div class="showAfterTheresult hide">
-          <button class="copy">Copiar</button>
-          <button class="clean">Limpar</button>
-        </div>
     </section>
   </main>
   <footer>
-    <p class="pFooter">
-      Desenvolvido com ❤️ por
-      <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank" class="aFooter">
-        Ryan Melo
-      </a>
-    </p>
+    <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank" class="aFooter">
+      Desenvolvido com ❤️ por Ryan Melo
+    </a>
   </footer>
+</div>
 </body>
 </html>

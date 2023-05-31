@@ -33,13 +33,23 @@
 body {
   background-color: #E5E5E5;
   font-family: 'Inter', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
   display: inline-block;
   position: absolute;
   top: 4%;
-  left: 1%;
+  left: calc(1% - 40px);
 }
 
 main {
@@ -47,39 +57,38 @@ main {
   justify-content: center;
   align-items: stretch;
   gap: 8rem;
-  margin: auto;
-  margin-top: 2rem;
 
   width: 95vw;
-  height: 65rem;
+  height: 70vh;
+  margin: 0 auto;
 
   position: relative;
 }
 
 #left {
-  max-width: 86.7rem;
-
+  /* min-width: 86.7rem; */
+  width: 50vw;
+  
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .right {
-  max-width: 40rem;
+  /* min-width: 40rem; */
+  width: 25vw;
 
   background-color: #FFFFFF;
   border-radius: 3.2rem;
 
-  padding: 0 3.2rem;
+  padding: 5rem 3.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  position: relative;
 }
 
-#rightWithButton {
+/* #rightWithButton {
   max-width: 40rem;
 
   background-color: #FFFFFF;
@@ -90,7 +99,7 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-}
+} */
 
 #left textarea {
   display: block;
@@ -116,7 +125,7 @@ main {
 
 #right .text {
   font-size: 2.4rem;
-  width: 33.6rem;
+  width: 100%;
   text-align: center;
   margin-top: 2rem;
 }
@@ -156,7 +165,8 @@ main {
 }
 
 .criptografar, .descriptografar, .copy, .clean{
-  width: 32.8rem;
+  max-width: 31.8rem;
+  width: 23vw;
   height: 6.7rem;
 
   border: 2px solid var(--Dark-blue-300);
@@ -179,8 +189,9 @@ main {
   justify-content: space-evenly;
   gap: 2rem;
 
-  width: 90%;
-  margin-top: 3.5rem;
+  max-width: 47rem;
+  width: 22vw;
+  margin-top: 1rem;
 }
 
 button:hover {
@@ -195,14 +206,23 @@ button:hover {
 }
 
 .container-right {
-  position: relative;
+  width: 23vw;
   text-align: center;
 }
 
 .result { 
   width: 33.6rem;
-  height: 43.7rem;
+  height: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#nothingFound img {
+  width: 100%;
 }
 
 .nothingFound {
@@ -234,12 +254,14 @@ button:hover {
   border: none;
   outline: none;
   resize: none;
+
+  width: 22vw;
+  height: 45vh;
   
   text-align: center;
   margin-top: 2rem;
   font-size: 3rem;
   font-weight: bold;
-  text-transform: capitalize;
 
   cursor: text;
   color: var(--Dark-blue-500);
@@ -279,7 +301,8 @@ input[type="checkbox"] {
 
 label {
   display: inline-block;
-  width: 5rem;
+  max-width: 5rem;
+  min-width: 5rem;
   height: 2.5rem;
   border: 3px solid #004ede;
   border-radius: 2.5rem;
@@ -351,18 +374,17 @@ label div {
   text-align: center;
   color: #008fcc;
   font-weight: 550;
-  font-size: 2rem;
+  font-size: 1.6rem;
 
   outline: none;
   border: 2px solid #008fcc;
   background-color: transparent;
-
-  appearance: none;
 }
 
 nav {
-  height: 5rem;
+  height: 7rem;
   background-color: var(--Dark-blue-400);
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -395,17 +417,25 @@ footer {
   height: 5rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0px;
 }
 
-footer p, footer a {
+footer a {
   font-size: 1.5rem;
-  text-decoration: none;
   font-weight: bold;
   
-  background-image: linear-gradient(to right, rgb(104, 0, 139), rgb(0, 41, 249));
+  background-image: linear-gradient(to right, rgb(76, 0, 101), rgb(0, 41, 249));
   background-clip: text;
   -webkit-background-clip: text;;
   -webkit-text-fill-color: transparent;
+}
+
+footer a::after {
+  content: '';
+  display: inline-block;
+  width: 77px;
+  height: 2px;
+  background: linear-gradient(to right, rgb(255, 0, 230), rgb(0, 249, 241));
+  position: relative;
+  right: 80px;
+  top: 5px;
 }

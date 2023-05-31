@@ -11,19 +11,19 @@ const exclamation = document.querySelector('.exclamation')
 const exclamationSpan = document.querySelector('.exclamation span')
 const pResult = document.querySelector('.pResult')
 const showBtnsAfterTheresult = document.querySelector('.showAfterTheresult')
+const containerRight = document.querySelector('.container-right')
 
 const checkbox = document.querySelector('#checkbox')
-const labelDiv = document.querySelector("#labelDiv")
-const label = document.querySelector("#label")
+const labelDiv = document.querySelector('#labelDiv')
+const label = document.querySelector('#label')
 
 const body = document.querySelector('body')
 const SectionRight = document.querySelector('#right')
 
-const typeOfCript = document.querySelector('#typeOfCript');
+const typeOfCript = document.querySelector('#typeOfCript')
 
-const pFooter = document.querySelector('.pFooter');
-const aFooter = document.querySelector('.aFooter');
-
+const pFooter = document.querySelector('.pFooter')
+const aFooter = document.querySelector('.aFooter')
 
 //  verificar se existem letras com acentos
 function checkAccent() {
@@ -47,6 +47,8 @@ function checkAccent() {
       exclamation.classList.add('alert2')
       nothingFound.classList.remove('nothingFound')
       resultArea.classList.add('hide')
+      containerRight.classList.remove('hide')
+      TextAreaResult.classList.add('hide')
       showBtnsAfterTheresult.classList.add('hide')
       return true
     } else {
@@ -55,8 +57,7 @@ function checkAccent() {
   }
 }
 
-
-//botão criptografar e descriptografar com a criptografia de cesar
+//criptografar e descriptografar com a criptografia de cesar
 function criptografarCesar() {
   let textAreaValue = textArea.value.toLowerCase()
   const alphabt = 'abcdefghijklmnopqrstuvwxyz'
@@ -69,9 +70,9 @@ function criptografarCesar() {
       criptedLetter = ' '
     } else {
       let index = alphabt.indexOf(char)
-      index = (index == 23) ? (-3) : index
-      index = (index == 24) ? (-2) : index
-      index = (index == 25) ? (-1) : index
+      index = index == 23 ? -3 : index
+      index = index == 24 ? -2 : index
+      index = index == 25 ? -1 : index
       criptedLetter = alphabt.charAt(index + 3)
     }
     message += criptedLetter
@@ -81,7 +82,9 @@ function criptografarCesar() {
   btnCopy.classList.remove('copied')
   nothingFound.classList.add('nothingFound')
   resultArea.classList.remove('hide')
+  containerRight.classList.add('hide')
   pResult.innerText = 'Essa é sua mensagem griptografada:'
+  TextAreaResult.classList.remove('hide')
   TextAreaResult.value = message
   showBtnsAfterTheresult.classList.remove('hide')
 }
@@ -98,9 +101,9 @@ function descriptografarCesar() {
       criptedLetter = ' '
     } else {
       let index = alphabt.indexOf(char)
-      index = (index == 0) ? (26) : index
-      index = (index == 1) ? (27) : index
-      index = (index == 2) ? (28) : index
+      index = index == 0 ? 26 : index
+      index = index == 1 ? 27 : index
+      index = index == 2 ? 28 : index
       criptedLetter = alphabt.charAt(index - 3)
     }
 
@@ -112,6 +115,7 @@ function descriptografarCesar() {
   nothingFound.classList.add('nothingFound')
   resultArea.classList.remove('hide')
   pResult.innerText = 'Essa é sua mensagem desgriptografada:'
+  TextAreaResult.classList.remove('hide')
   TextAreaResult.value = message
   showBtnsAfterTheresult.classList.remove('hide')
 }
@@ -128,40 +132,46 @@ btnCopy.addEventListener('click', () => {
 
 btnClean.addEventListener('click', () => {
   nothingFound.classList.remove('nothingFound')
+  TextAreaResult.classList.add('hide')
   resultArea.classList.add('hide')
+  containerRight.classList.remove('hide')
   showBtnsAfterTheresult.classList.add('hide')
   textArea.value = ''
 })
 
 // dark mode
 
-checkbox.addEventListener("change", () => {
-  body.classList.toggle("bodyDark")
-  SectionRight.classList.toggle("rightDark")
-  btnClean.classList.toggle("buttonDark")
-  btnCopy.classList.toggle("buttonDark")
-  btnCript.classList.toggle("buttonDark")
-  btnDescript.classList.toggle("buttonDark")
-  TextAreaResult.classList.toggle("areaDark")
+checkbox.addEventListener('change', () => {
+  body.classList.toggle('bodyDark')
+  SectionRight.classList.toggle('rightDark')
+  btnClean.classList.toggle('buttonDark')
+  btnCopy.classList.toggle('buttonDark')
+  btnCript.classList.toggle('buttonDark')
+  btnDescript.classList.toggle('buttonDark')
+  TextAreaResult.classList.toggle('areaDark')
 })
 
-checkbox.addEventListener("change", () => {
-  TextAreaResult.style.backgroundColor = checkbox.checked ? '#000637' : '#FFFFFF'
+checkbox.addEventListener('change', () => {
+  TextAreaResult.style.backgroundColor = checkbox.checked
+    ? '#000637'
+    : '#FFFFFF'
   TextAreaResult.style.color = checkbox.checked ? '#c3cefc' : '#052051'
   textArea.style.color = checkbox.checked ? '#c3cefc' : '#052051'
   exclamation.style.color = checkbox.checked ? '#c3cefc' : 'black'
 })
 
-checkbox.addEventListener("change", () => {
-  labelDiv.style.animation = checkbox.checked ? 'toggleOn 500ms ease forwards' : 'toggleOff 500ms ease forwards'
-  label.style.border = checkbox.checked ? '3px solid #008fcc' : '3px solid #004ede'
+checkbox.addEventListener('change', () => {
+  labelDiv.style.animation = checkbox.checked
+    ? 'toggleOn 500ms ease forwards'
+    : 'toggleOff 500ms ease forwards'
+  label.style.border = checkbox.checked
+    ? '3px solid #008fcc'
+    : '3px solid #004ede'
 
-  pFooter.style.backgroundImage = checkbox.checked ? 'linear-gradient(to right, rgb(0, 247, 255), rgb(154, 83, 225))' : 'linear-gradient(to right, rgb(104, 0, 139), rgb(0, 41, 249))'
-  aFooter.style.backgroundImage = checkbox.checked ? 'linear-gradient(to right, rgb(0, 247, 255), rgb(154, 83, 225))' : 'linear-gradient(to right, rgb(104, 0, 139), rgb(0, 41, 249))'
+  aFooter.style.backgroundImage = checkbox.checked
+    ? 'linear-gradient(to left, rgb(0, 249, 241), rgb(255, 0, 230))'
+    : 'linear-gradient(to right, rgb(76, 0, 101), rgb(0, 41, 249))'
 })
-
-
-
 
 // criptografia padrão
 
@@ -171,11 +181,17 @@ checkbox.addEventListener("change", () => {
 // A letra "o" é convertida para "ober"
 // A letra "u" é convertida para "ufat"
 
+const matriz = [
+  ['a', 'ai'],
+  ['e', 'enter'],
+  ['i', 'imes'],
+  ['o', 'ober'],
+  ['u', 'ufat']
+]
 
-const matriz = [['a', 'ai'], ['e', 'enter'], ['i', 'imes'], ['o', 'ober'], ['u', 'ufat']]
 function criptografarDefault() {
   let textAreaValue = textArea.value.toLowerCase()
-  let message;
+  let message
   for (let i of matriz) {
     if (textAreaValue.includes(i[0])) {
       message = textAreaValue.replaceAll(i[0], i[1])
@@ -186,8 +202,10 @@ function criptografarDefault() {
   btnCopy.classList.remove('copied')
   nothingFound.classList.add('nothingFound')
   resultArea.classList.remove('hide')
+  containerRight.classList.add('hide')
   pResult.innerText = 'Essa é sua mensagem griptografada:'
   TextAreaResult.value = message
+  TextAreaResult.classList.remove('hide')
   showBtnsAfterTheresult.classList.remove('hide')
 }
 
@@ -203,11 +221,12 @@ function descriptografarDefault() {
   btnCopy.classList.remove('copied')
   nothingFound.classList.add('nothingFound')
   resultArea.classList.remove('hide')
+  containerRight.classList.add('hide')
   pResult.innerText = 'Essa é sua mensagem griptografada:'
+  TextAreaResult.classList.remove('hide')
   TextAreaResult.value = message
   showBtnsAfterTheresult.classList.remove('hide')
 }
-
 
 // Botão para criptografar
 btnCript.addEventListener('click', () => {
@@ -215,20 +234,20 @@ btnCript.addEventListener('click', () => {
 
   if (validation) {
     return
-  } else if (textArea.value == "") {
+  } else if (textArea.value == '') {
     textArea.classList.add('alert')
     exclamation.classList.add('alert2')
-    exclamationSpan.innerText = "Insira algum texto"
+    exclamationSpan.innerText = 'Insira algum texto'
     nothingFound.classList.remove('nothingFound')
     resultArea.classList.add('hide')
     showBtnsAfterTheresult.classList.add('hide')
   } else {
     textArea.classList.remove('alert')
     exclamation.classList.remove('alert2')
-    exclamationSpan.innerText = "Não utilizar acento."
-    if (typeOfCript.value === 'cesar') {
+    exclamationSpan.innerText = 'Não utilizar acento.'
+    if (typeOfCript.value == 'cesar') {
       criptografarCesar()
-    } else if (typeOfCript.value === "default") {
+    } else if (typeOfCript.value == 'default') {
       criptografarDefault()
     }
   }
@@ -241,43 +260,22 @@ btnDescript.addEventListener('click', () => {
 
   if (validation) {
     return
-  } else if (textArea.value == "") {
+  } else if (textArea.value == '') {
     textArea.classList.add('alert')
     exclamation.classList.add('alert2')
-    exclamationSpan.innerText = "Insira algum texto"
+    exclamationSpan.innerText = 'Insira algum texto'
     nothingFound.classList.remove('nothingFound')
     resultArea.classList.add('hide')
     showBtnsAfterTheresult.classList.add('hide')
   } else {
     textArea.classList.remove('alert')
     exclamation.classList.remove('alert2')
-    exclamationSpan.innerText = "Não utilizar acento."
+    exclamationSpan.innerText = 'Não utilizar acento.'
     if (typeOfCript.value === 'cesar') {
       descriptografarCesar()
-    } else if (typeOfCript.value === "default") {
+    } else if (typeOfCript.value === 'default') {
       descriptografarDefault()
     }
   }
   console.log(textArea.value)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
