@@ -25,6 +25,7 @@ const typeOfCript = document.querySelector('#typeOfCript')
 
 const pFooter = document.querySelector('.pFooter')
 const aFooter = document.querySelector('.aFooter')
+const footer = document.querySelector('footer')
 
 //  verificar se existem letras com acentos
 function checkAccent() {
@@ -250,7 +251,7 @@ textArea.addEventListener("input", () => {
   }
 })
 
-const end = aFooter.getBoundingClientRect().y
+const end = footer.getBoundingClientRect().y
 const width = window.innerWidth
 
 let deslizarTela = () => {
