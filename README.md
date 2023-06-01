@@ -21,7 +21,7 @@
 
 <br/>
 
-<div style="position: relative;" class="techs">
+<div class="techs">
   
 ## 🚀 Tecnologias
 
@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 - Figma
 
-## 💻 Features <img src="assets/images/badge decodificador - ONE + Alura.png" alt="Imagem" width="400" style="position: absolute; right: 150px; bottom: -600px;" title="Badge concedida por completar o challenge"/>
+## 💻 Features 
 
 Esse projeto tem as seguintes features:
 
@@ -43,6 +43,11 @@ Esse projeto tem as seguintes features:
 - Botão copiar, colar e limpar os inputs
 - Botão colar desaparecer quando estiver digitando algum texto
 - Responsividade
+</div>
+
+<div align="center">
+  <img src="assets/images/badge decodificador - ONE + Alura.png" alt="Imagem" width="300" title="Badge concedida por completar o challenge"/>
+  <h6>Badge concedida por completar o challenge</h6>
 </div>
 
 <div align="center">
