@@ -2,8 +2,8 @@
 <h3 align="center"> Seu codificador e decodificar web </h3>
 
 <p align="center">
-  O DecipherMe é um Challenge <a href="https://www.alura.com.br/" target="_brank">Alura</a> do Programa 
-  <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_brank">ONE - Oracle Next Education.</a> <br/>
+  O DecipherMe é um Challenge <a href="https://www.alura.com.br/" target="_blank">Alura</a> do Programa 
+  <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank">ONE - Oracle Next Education.</a> <br/>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 <br>
 
 <p align="center">
-  <a href="https://ryan-melo.github.io/Challenge-ONE-Decodificador-de-Texto/" target="_brank"><img src="assets/images/screen.gif" width="100%"></a>
+  <a href="https://ryan-melo.github.io/Challenge-ONE-Decodificador-de-Texto/" target="_blank"><img src="assets/images/screen.gif" width="100%"></a>
   (Clique na imagem para acessar o decodificador)
 </p>
 
@@ -43,7 +43,7 @@ Esse projeto tem as seguintes features:
 ---
 <div align="center">
   <p>
-    Feito com ♥ by <a href="https://github.com/ryan-melo" target="_brank">Ryan Melo</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
-    :wave: Me acompanhe no <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_brank">LinkedIn</a>!
+    Feito com ♥ by <a href="https://github.com/ryan-melo" target="_blank">Ryan Melo</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
+    :wave: Me acompanhe no <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank">LinkedIn</a>!
   </p>
 </div>
