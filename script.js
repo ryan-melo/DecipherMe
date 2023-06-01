@@ -12,6 +12,7 @@ const exclamationSpan = document.querySelector('.exclamation span')
 const pResult = document.querySelector('.pResult')
 const showBtnsAfterTheresult = document.querySelector('.showAfterTheresult')
 const containerRight = document.querySelector('.container-right')
+const btnPaste = document.querySelector('.paste')
 
 const checkbox = document.querySelector('#checkbox')
 const labelDiv = document.querySelector('#labelDiv')
@@ -120,7 +121,12 @@ function descriptografarCesar() {
   showBtnsAfterTheresult.classList.remove('hide')
 }
 
-// botão clean e copy
+// botão clean, copy e paste
+
+btnPaste.addEventListener("click", async (e) => {
+  let paste = await navigator.clipboard.readText();
+  textArea.value = paste
+})
 
 btnCopy.addEventListener('click', () => {
   let copy = TextAreaResult.value
@@ -146,6 +152,7 @@ checkbox.addEventListener('change', () => {
   body.classList.toggle('bodyDark')
   SectionRight.classList.toggle('rightDark')
   btnClean.classList.toggle('buttonDark')
+  btnPaste.classList.toggle('buttonDark')
   btnCopy.classList.toggle('buttonDark')
   btnCript.classList.toggle('buttonDark')
   btnDescript.classList.toggle('buttonDark')

@@ -147,14 +147,17 @@ main {
 
 .exclamation {
   display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: .5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: .8rem;
 
   width: 25rem;
   font-size: 1.5rem;
 
   margin-left: 1rem;
+  /* padding-left: 1rem; */
+  position: relative;
 }
 
 .buttons {
@@ -164,7 +167,7 @@ main {
   margin-top: 1.6rem;
 }
 
-.criptografar, .descriptografar, .copy, .clean{
+.criptografar, .descriptografar, .copy, .clean, .paste{
   max-width: 31.8rem;
   width: 23vw;
   height: 6.7rem;
@@ -201,8 +204,20 @@ button:hover {
   cursor: pointer;
 }
 
+.paste {
+  width: 50%;
+  height: 4rem;
+  position: relative;
+  top: 6px;
+  left: 2rem;
+}
+
 body .hide {
   display: none;
+}
+
+.textAreaWithButton {
+  position: relative;
 }
 
 .container-right {
@@ -243,11 +258,9 @@ body .hide {
 }
 
 .alert2 {
-  border: 2px solid rgb(221, 47, 47);
   border-radius: 10px;
   font-weight: bold;
   font-size: 2rem;
-  padding-left: 20px;
 }
 
 #TextAreaResult {
@@ -293,6 +306,11 @@ body .hide {
 button.buttonDark {
   background-color: #000637;
   color: #c3cefc;
+}
+
+button.buttonDark:hover {
+  background-color: #000f82;
+  color: #e3e9fd;
 }
 
 input[type="checkbox"] {
