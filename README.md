@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>
+  <a href=".techs">Tecnologias</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Features</a>
+  <a href=".techs">Features</a>
 </p>
 
 <br>
@@ -19,6 +19,10 @@
   (Clique na imagem para acessar o decodificador)
 </p>
 
+<br/>
+
+<div style="position: relative;" class="techs">
+  
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -28,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 - Figma
 
-## 💻 Features
+## 💻 Features <img src="assets/images/badge decodificador - ONE + Alura.png" alt="Imagem" width="400" style="position: absolute; right: 150px; bottom: -600px;" title="Badge concedida por completar o challenge"/>
 
 Esse projeto tem as seguintes features:
 
@@ -39,8 +43,8 @@ Esse projeto tem as seguintes features:
 - Botão copiar, colar e limpar os inputs
 - Botão colar desaparecer quando estiver digitando algum texto
 - Responsividade
+</div>
 
----
 <div align="center">
   <p>
     Feito com ♥ by <a href="https://github.com/ryan-melo" target="_blank">Ryan Melo</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
