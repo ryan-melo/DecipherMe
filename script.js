@@ -126,12 +126,13 @@ function descriptografarCesar() {
 btnPaste.addEventListener("click", async (e) => {
   let paste = await navigator.clipboard.readText();
   textArea.value = paste
+  btnPaste.classList.add("hide")
 })
 
 btnCopy.addEventListener('click', () => {
   let copy = TextAreaResult.value
   navigator.clipboard.writeText(copy)
-
+  
   btnCopy.innerText = 'Copiado!'
   btnCopy.classList.add('copied')
 })
@@ -144,6 +145,7 @@ btnClean.addEventListener('click', () => {
   showBtnsAfterTheresult.classList.add('hide')
   textArea.value = ''
   textArea.focus()
+  btnPaste.classList.remove("hide")
 })
 
 // dark mode
@@ -236,12 +238,30 @@ function descriptografarDefault() {
   showBtnsAfterTheresult.classList.remove('hide')
 }
 
-const end = aFooter.getBoundingClientRect().y
 
 // Botão para criptografar
+
+textArea.addEventListener("input", () => {
+  if (textArea.value == "") {
+    btnPaste.classList.remove("hide")
+    console.log('foi')
+  } else {
+    btnPaste.classList.add("hide")
+  }
+})
+
+const end = aFooter.getBoundingClientRect().y
+const width = window.innerWidth
+
+let deslizarTela = () => {
+  if (width < 510) {
+    window.scrollTo(0, end)
+    console.log('cheguei')
+  }
+}
+
 btnCript.addEventListener('click', () => {
   let validation = checkAccent()
-  const width = window.innerWidth
 
   if (validation) {
     return
@@ -256,13 +276,12 @@ btnCript.addEventListener('click', () => {
     textArea.classList.remove('alert')
     exclamation.classList.remove('alert2')
     exclamationSpan.innerText = 'Não utilizar acento.'
-    if (width < 500) {
-      window.scrollTo(0, end)
-    }
-    if (typeOfCript.value == 'cesar') {
+        if (typeOfCript.value == 'cesar') {
       criptografarCesar()
+      deslizarTela()
     } else if (typeOfCript.value == 'default') {
       criptografarDefault()
+      deslizarTela()
     }
   }
 
@@ -272,7 +291,6 @@ btnCript.addEventListener('click', () => {
 // Botão para descriptografar
 btnDescript.addEventListener('click', () => {
   let validation = checkAccent()
-  const width = window.innerWidth
 
   if (validation) {
     return
@@ -288,14 +306,12 @@ btnDescript.addEventListener('click', () => {
     exclamation.classList.remove('alert2')
     exclamationSpan.innerText = 'Não utilizar acento.'
 
-    if (width < 500) {
-      window.scrollTo(0, end)
-      console.log('cheguei')
-    }
     if (typeOfCript.value === 'cesar') {
       descriptografarCesar()
+      deslizarTela()
     } else if (typeOfCript.value === 'default') {
       descriptografarDefault()
+      deslizarTela()
     }
   }
   console.log(width)

@@ -215,9 +215,13 @@ button:hover {
 }
 
 .paste {
-  width: 50%;
+  width: 10%;
   height: 4rem;
-  margin-left: 11%;
+
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  /* border: solid 3px red; */
 }
 
 body .hide {
@@ -225,6 +229,7 @@ body .hide {
 }
 
 .textAreaWithButton {
+  /* border: solid 3px red; */
   position: relative;
 }
 
