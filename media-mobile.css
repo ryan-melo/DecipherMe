@@ -1,6 +1,29 @@
+.navMedia h6{
+  font-size: 1rem;
+  width: 115%;
+  text-align: center;
+}
+
+.navMedia select {
+  width: 95%;
+  font-size: .2rem;
+}
+
+.linkAndGitandBlueMode  {
+  gap: 5px;
+}
+
+.linkAndGit {
+  width: 50%;
+}
+
 .logo {
-  top: 17px;
-  left: -60px;
+  top: -10px;
+  left: -30px;
+}
+
+.logo img {
+  width: 50%;
 }
 
 .buttons {
@@ -13,4 +36,14 @@ body .showAfterTheresult {
 
 footer a {
   width: 67%;
+}
+
+footer p {
+  font-size: 80%;
+}
+
+footer span::after {
+  width: 60px;
+  right: 35px;
+  bottom: -1px;
 }

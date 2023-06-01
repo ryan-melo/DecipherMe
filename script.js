@@ -137,6 +137,7 @@ btnClean.addEventListener('click', () => {
   containerRight.classList.remove('hide')
   showBtnsAfterTheresult.classList.add('hide')
   textArea.value = ''
+  textArea.focus()
 })
 
 // dark mode

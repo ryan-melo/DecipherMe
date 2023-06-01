@@ -435,7 +435,7 @@ footer a {
   position: relative;
 }
 
-footer p::after {
+footer span::after {
   content: '';
   display: inline-block;
   width: 77px;
