@@ -1,0 +1,16 @@
+.logo {
+  top: 17px;
+  left: -60px;
+}
+
+.buttons {
+  gap: 2rem;
+}
+
+body .showAfterTheresult {
+  padding: 0 2rem;
+}
+
+footer a {
+  width: 67%;
+}

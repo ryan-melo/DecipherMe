@@ -11,21 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="media-tablet.css">
+  <link rel="stylesheet" media="screen and (max-width: 425px)" href="media-mobile.css">
   <script src="script.js" defer></script>
 </head>
 <body class="">
 <div class="container">
   <nav>
-    <div>
+    <div class="navMedia">
       <h6>Escolha seu tipo de criptografia:</h6>
       <select name="typeOfCript" id="typeOfCript">
-      <option value="cesar">Criptigrafia de César</option>
-      <option value="default">Criptigrafia Padrão</option>
+        <option value="cesar">Criptigrafia de César</option>
+        <option value="default">Criptigrafia Padrão</option>
       </select>
     </div>
 
     <div class="linkAndGitandBlueMode">
-      <div class="blueMode">
+      <div class="blueMode navMedia">
         <h6>Blue Mode:</h6>
         <label for="checkbox" id="label">
           <p class="on">On</p>
@@ -67,7 +69,7 @@
 
     <section id="right" class="right">
       <div class="result hide">
-        <p class="pResult"></p>
+        <p class="pResult hide"></p>
         <textarea id="TextAreaResult" class="hide" disabled ></textarea>
         <div class="showAfterTheresult hide">
           <button class="copy">Copiar</button>
@@ -87,7 +89,9 @@
   </main>
   <footer>
     <a href="https://www.linkedin.com/in/ryan-melo-m/" target="_blank" class="aFooter">
-      Desenvolvido com ❤️ por Ryan Melo
+      <p class="pFooter">
+        Desenvolvido com ❤️ por Ryan Melo
+      </p>
     </a>
   </footer>
 </div>

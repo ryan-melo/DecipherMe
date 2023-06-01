@@ -1,0 +1,85 @@
+body {
+  width: auto;
+  height: auto;
+}
+
+main {
+  width: auto;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.navMedia {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: auto;
+}
+
+#left {
+  width: 90vw;
+}
+
+#right {
+  width: 90vw;
+
+}
+
+#right img {
+  display: none;
+}
+
+#left textarea {
+  width: 100%;
+}
+
+.container-right {
+  width: auto;
+}
+
+.criptografar, .descriptografar, .copy, .clean {
+  width: 90%;
+}
+
+.result {
+  width: 90vw;
+  height: 100%;
+}
+
+#TextAreaResult {
+  width: 80%;
+  height: 100%;
+  min-height: 30vh;
+}
+
+.showAfterTheresult {
+  max-width: 100%;
+  width: 100%;
+}
+
+.logo {
+  top: 17px;
+  left: -70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

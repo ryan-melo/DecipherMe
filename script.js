@@ -168,7 +168,7 @@ checkbox.addEventListener('change', () => {
     ? '3px solid #008fcc'
     : '3px solid #004ede'
 
-  aFooter.style.backgroundImage = checkbox.checked
+  pFooter.style.backgroundImage = checkbox.checked
     ? 'linear-gradient(to left, rgb(0, 249, 241), rgb(255, 0, 230))'
     : 'linear-gradient(to right, rgb(76, 0, 101), rgb(0, 41, 249))'
 })
