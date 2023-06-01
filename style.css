@@ -204,12 +204,16 @@ button:hover {
   cursor: pointer;
 }
 
+.exclamationAndButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
 .paste {
   width: 50%;
   height: 4rem;
-  position: relative;
-  top: 6px;
-  left: 2rem;
+  margin-left: 11%;
 }
 
 body .hide {

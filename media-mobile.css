@@ -47,3 +47,7 @@ footer span::after {
   right: 35px;
   bottom: -1px;
 }
+
+.paste {
+  margin-left: 0;
+}
