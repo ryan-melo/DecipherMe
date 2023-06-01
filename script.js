@@ -236,9 +236,12 @@ function descriptografarDefault() {
   showBtnsAfterTheresult.classList.remove('hide')
 }
 
+const end = aFooter.getBoundingClientRect().y
+
 // Botão para criptografar
 btnCript.addEventListener('click', () => {
   let validation = checkAccent()
+  const width = window.innerWidth
 
   if (validation) {
     return
@@ -253,18 +256,23 @@ btnCript.addEventListener('click', () => {
     textArea.classList.remove('alert')
     exclamation.classList.remove('alert2')
     exclamationSpan.innerText = 'Não utilizar acento.'
+    if (width < 500) {
+      window.scrollTo(0, end)
+    }
     if (typeOfCript.value == 'cesar') {
       criptografarCesar()
     } else if (typeOfCript.value == 'default') {
       criptografarDefault()
     }
   }
-  console.log(textArea.value)
+
+  
 })
 
 // Botão para descriptografar
 btnDescript.addEventListener('click', () => {
   let validation = checkAccent()
+  const width = window.innerWidth
 
   if (validation) {
     return
@@ -279,11 +287,17 @@ btnDescript.addEventListener('click', () => {
     textArea.classList.remove('alert')
     exclamation.classList.remove('alert2')
     exclamationSpan.innerText = 'Não utilizar acento.'
+
+    if (width < 500) {
+      window.scrollTo(0, end)
+      console.log('cheguei')
+    }
     if (typeOfCript.value === 'cesar') {
       descriptografarCesar()
     } else if (typeOfCript.value === 'default') {
       descriptografarDefault()
     }
   }
-  console.log(textArea.value)
+  console.log(width)
 })
+
